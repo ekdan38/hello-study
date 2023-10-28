@@ -16,11 +16,9 @@ public class MemberService {
     public MemberService(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }
-
     /**
      회원 가입
-
-     */
+     **/
     public long join(Member member){
         //같은 이름이 있는 중복 확인x
         ValidateDuplicateMember(member); //증복 회원 검증
@@ -35,12 +33,12 @@ public class MemberService {
                 });
     }
     /**
-     * 전체 회원 조회
-     */
+      전체 회원 조회
+     **/
     public List<Member> findMembers(){
         return memberRepository.findAll();
     }
-    public Optional<Member> findOne(Long memberId){
+    public Optional<Member> findOn (Long memberId){
         return memberRepository.findById(memberId);
     }
 }
