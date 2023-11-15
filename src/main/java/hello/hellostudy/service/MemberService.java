@@ -8,43 +8,42 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
-@Service
 
+@Service
 public class MemberService {
+
     private final MemberRepository memberRepository;
 
     @Autowired
-    public MemberService(MemberRepository memberRepository) {
+    public MemberService(MemberRepository memberRepository){
         this.memberRepository = memberRepository;
     }
 
-
     /**
-     회원 가입
-     **/
-    public long join(Member member){
-        //같은 이름이 있는 중복 확인x
-        ValidateDuplicateMember(member); //증복 회원 검증
+     *
+     * 회원가입
+     */
+    public Long join(Member member){
+        //같은 이름이 있는 중복 회원 x
+        validateDuplicateMember(member);//중복 회원 검증
         memberRepository.save(member);
         return member.getId();
     }
 
-
-
-    private void ValidateDuplicateMember(Member member) {
+    private void validateDuplicateMember(Member member) {
         memberRepository.findByName(member.getName())
-                .ifPresent(m ->{
+                .ifPresent(member1 -> {
                     throw new IllegalStateException("이미 존재하는 회원입니다.");
                 });
     }
-
     /**
-      전체 회원 조회
-     **/
+     * 전체회원 조회
+     */
     public List<Member> findMembers(){
         return memberRepository.findAll();
     }
-    public Optional<Member> findOn (Long memberId){
+    public Optional<Member> findOne(Long memberId){
         return memberRepository.findById(memberId);
     }
+
 }

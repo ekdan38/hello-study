@@ -5,6 +5,7 @@ import hello.hellostudy.domain.Member;
 import java.util.List;
 import java.util.Optional;
 
+
 public interface MemberRepository {
     Member save(Member member);//"Member"객체를 저장하는 역할 "Member" 객체를 인자로 받고, 저장된 멤버를 반환.
     Optional<Member> findById(Long id);//주어진 id에 해당하는 멤버를 찾아서 반환.
