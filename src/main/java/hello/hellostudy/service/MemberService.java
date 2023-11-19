@@ -32,6 +32,7 @@ public class MemberService {
 
 
 
+
     private void validateDuplicateMember(Member member) {
         memberRepository.findByName(member.getName())
                 .ifPresent(member1 -> {
