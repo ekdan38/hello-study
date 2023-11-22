@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import java.util.*;
 @Repository
 
+//동시성 문제가 고려되어 있지 않아서 실무에서는 ConcurrentHashMap, AtomicLong을 사용한다.
 public class MemoryMemberRepository implements MemberRepository {
     private static Map<Long, Member> store = new HashMap<>();
     private static long sequence = 0L;

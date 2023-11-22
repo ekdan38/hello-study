@@ -18,7 +18,6 @@ public class MemberService {
     public MemberService(MemberRepository memberRepository){
         this.memberRepository = memberRepository;
     }
-
     /**
      *
      * 회원가입
@@ -29,6 +28,7 @@ public class MemberService {
         memberRepository.save(member);
         return member.getId();
     }
+
 
 
 
