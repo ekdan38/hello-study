@@ -16,6 +16,7 @@ public class practiceController {
         return hello;
     }
 
+
     static class Hello{
         private String name;
         private int age;
