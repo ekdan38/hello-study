@@ -20,8 +20,7 @@ public class MemoryMemberRepositoryTest {
         member.setName("홍정화");
         repository.save(member);
         Member result = repository.findById(member.getId()).get();
-//        System.out.println("result = " + (result == member));
-        assertThat(member).isEqualTo(result);
+          assertThat(member).isEqualTo(result);
 //        assertThat(member).isEqualTo(result);
     }
 

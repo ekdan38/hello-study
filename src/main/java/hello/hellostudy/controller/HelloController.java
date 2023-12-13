@@ -21,6 +21,7 @@ public class HelloController {
         //확인하려면 localhost:8080/hello-mvc?name=spring (name에 spring 저장)
     }
 
+
     //API 시작부분
     @GetMapping("hello-string")
     @ResponseBody // http 바디부에다가 return "hello" + name; 을 직접 넣어주겠다.
