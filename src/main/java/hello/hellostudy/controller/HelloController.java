@@ -11,7 +11,7 @@ public class HelloController {
     @GetMapping("hello") //HTTP GET요청. /hello경로로 들어오는 GET요청.
     public String hello(Model model){ //"hello" 엔드포인트로 들어오는 GET요청처리 메소드. "Model"객체를 파라미터로 받는다.
         model.addAttribute("data", "hello!"); //"data" 속성에 "hello" 추가.
-        return "hello"; // "hello"라는 뷰를 찾아 "data" , "hx ello!" 뷰로 전달.
+        return "hello"; // "hello"라는 뷰를 찾아 "data" , "hx ello!" 뷰로 전달.   
     }
     @GetMapping("hello-mvc") //HTTP GET요청. "hello-mvc"로 들어오는 GET요청.
     public String helloMvc(@RequestParam(value = "name") String name, Model model){
