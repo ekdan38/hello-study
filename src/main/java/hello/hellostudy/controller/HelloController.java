@@ -22,9 +22,6 @@ public class HelloController {
     }
 
 
-
-
-
     //API 시작부분
     @GetMapping("hello-string")
     @ResponseBody // http 바디부에다가 return "hello" + name; 을 직접 넣어주겠다.
