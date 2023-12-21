@@ -13,7 +13,7 @@ import org.springframework.context.annotation.Configuration;
 public class SpringConfig {
     @Bean
     public MemberService memberService(){
-        return new MemberService(MemberRepository memb);
+        return new MemberService(MemberRepository memberRepository);
     }
 
     @Bean
@@ -22,6 +22,7 @@ public class SpringConfig {
     }
 
 }
+
 
 
 
