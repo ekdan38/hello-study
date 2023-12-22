@@ -16,12 +16,14 @@ public class SpringConfig {
         return new MemberService(MemberRepository memberRepository);
     }
 
+
     @Bean
     public MemoryMemberRepository memoryMemberRepository(){
         return new MemoryMemberRepository();
     }
 
 }
+
 
 
 
