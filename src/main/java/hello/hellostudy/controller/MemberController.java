@@ -17,8 +17,6 @@ public class MemberController {
      */
     private final MemberService memberService;
 
-
-
     @Autowired
      // 생성자 호출할때 Autowired라고 되어있으면 스프링이 스프링 컨테이너에 잇는 멤버 서비를 가져다가 연결 시켜둔다.
     public MemberController(MemberService memberService) {
