@@ -13,10 +13,10 @@ public class MemoryMemberRepository implements MemberRepository {
 
     public Member save(Member member) {
         member.setId(++sequence);
-
         store.put(member.getId(), member);
         return member;
     }
+
 
 
     @Override
@@ -25,10 +25,11 @@ public class MemoryMemberRepository implements MemberRepository {
         return Optional.ofNullable(store.get(id));
     }
 
+
     @Override
     public Optional<Member> findByName(String name) {
         return store.values().stream()
-                .filter( member -> member.getName().equals(name))
+                .filter(member -> member.getName().equals(name))
                 .findAny();
     }
 
