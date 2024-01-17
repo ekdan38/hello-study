@@ -17,14 +17,10 @@ public class MemoryMemberRepository implements MemberRepository {
         return member;
     }
 
-
-
     @Override
-
     public Optional<Member> findById(Long id) {
         return Optional.ofNullable(store.get(id));
     }
-
 
     @Override
     public Optional<Member> findByName(String name) {
@@ -33,11 +29,11 @@ public class MemoryMemberRepository implements MemberRepository {
                 .findAny();
     }
 
-
     @Override
     public List<Member> findAll() {
         return new ArrayList<>(store.values());
     }
+
     public void clearStore(){
         store.clear();
     }

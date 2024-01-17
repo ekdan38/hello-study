@@ -24,7 +24,6 @@ public class MemoryMemberRepositoryTest {
 //        assertThat(member).isEqualTo(result);
     }
 
-
     @Test
     public void findByname(){
         Member member1 = new Member();
