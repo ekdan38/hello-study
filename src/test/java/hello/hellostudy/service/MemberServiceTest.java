@@ -51,6 +51,8 @@ class MemberServiceTest {
         //when
 
         //then
+
+
         memberService.join(member1);
  //        try{
 //            memberService.join(member2);
