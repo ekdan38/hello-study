@@ -29,8 +29,6 @@ class MemberServiceTest {
     }
 
 
-
-
     @Test
     void 회원가입() {
         //given
