@@ -20,6 +20,7 @@ class MemberServiceTest {
         memberService = new MemberService(memberRepository);
     }
 
+
     @AfterEach
     public void afterEach(){
         memberRepository.clearStore();
