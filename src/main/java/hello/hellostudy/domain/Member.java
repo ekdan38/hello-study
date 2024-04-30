@@ -2,6 +2,7 @@ package hello.hellostudy.domain;
 
 public class Member {
 
+    private Integer age;
     private Long id;
     private String name;
 
